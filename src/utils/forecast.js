@@ -10,7 +10,7 @@ request({url:url,json:true},(err,res)=>{
     }else if(res.body.error){
         callback('enter your valid location',undefined);
     }else{
-        callback(undefined,`It is currently ${res.body.current.temperature} degrees out and there is a ${res.body.current.precip}% chance of rain`);
+        callback(undefined,`It is currently ${res.body.current.temperature} degrees out feels like ${res.body.current.feelslike}and there is a ${res.body.current.precip}% chance of rain`);
     }
     
 });
